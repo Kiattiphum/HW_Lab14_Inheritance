@@ -37,7 +37,7 @@ int main(int argc, char *argv[]){
   cout<<"============================"<<endl;
   A.show_all();
   cout<<"============================"<<endl;
-  //A.snap_finger(); // kill 1/2 (make size=0)
+  A.snap_finger(); // kill 1/2 (make size=0)
   A.show_all();
   cout<<"============================"<<endl;
 

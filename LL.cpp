@@ -34,7 +34,17 @@ void LL::add_node(NODE *&A){
 }
 
 void LL::snap_finger(){
-  int kill;
+  int kill, i, j, count;
+  NODE*temp;
   srand(time(NULL));
-  kill=rand()%size; //สุ่มฆ่า
+  count = size/2;
+  for(i=0;i<count;i++){
+    temp = hol;
+    kill=rand()%size;
+    for(j = 0; j < kill; j++){
+      temp=temp->move_next();
+    }
+    if(temp->isDead()) i--;
+    else temp->killed();
+  }
 }
